@@ -39,14 +39,46 @@ public class Counter {
 	}
 
 	// TODO: dev2- method for increment to closest prime number
-	public void incrementToPrime() {
-		_ctr = -99;
+    public void incrementToPrime() {
+        if (_ctr < 2) {
+            // Handle the case where the counter is less than 2
+            _ctr = 2;
+        } else {
+            // Increment to the closest prime number
+            while (!isPrime(_ctr)) {
+                _ctr++;
+            }
+        }
+    }
+// TODO: dev2- method for decrement to closest prime number
+public void decrementToPrime() {
+	if (_ctr < 2) {
+		// Handle the case where the counter is less than 2
+		_ctr = 2;
+	} else {
+		// Decrement to the closest prime number
+		while (!isPrime(_ctr)) {
+			_ctr--;
+			// Check if the counter goes below 2
+			if (_ctr < 2) {
+				_ctr = 2;
+				break;
+			}
+		}
 	}
-
-	// TODO: dev2- method for decrement to closest prime number
-	public void decrementToPrime() {
-		_ctr = -99;
-	}
+}
+    // Helper method to check if a number is prime
+    private boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 	// TODO: dev3- count the frequency of word in sentence,
 	// refactor source code from dev1 and dev2
