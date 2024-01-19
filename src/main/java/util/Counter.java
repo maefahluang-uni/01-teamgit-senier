@@ -19,7 +19,7 @@ public class Counter {
 
 	// method resets _ctr
 	public void reset() {
-		_ctr = 1; // faulty reset, _ctr should rather be 0
+		_ctr = 0; // faulty reset, _ctr should rather be 0
 	}
 
 	// method multiplies _ctr by n
@@ -87,8 +87,6 @@ public void decrementToPrime() {
         return true;
     }
 
-	// TODO: dev3- count the frequency of word in sentence,
-	// refactor source code from dev1 and dev2
 	// TODO: dev3- count the frequency of word in sentence,
 	// refactor source code from dev1 and dev2
 	public void countFrequency(String word, String sentence) {
