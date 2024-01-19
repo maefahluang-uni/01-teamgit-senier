@@ -86,9 +86,7 @@ public void decrementToPrime() {
         }
         return true;
     }
-
-
-	// TODO: dev3- count the frequency of word in sentence,==
+  
 	// refactor source code from dev1 and dev2
 	public void countFrequency(String word, String sentence) {
 		String[] words = sentence.split("\\s+");
