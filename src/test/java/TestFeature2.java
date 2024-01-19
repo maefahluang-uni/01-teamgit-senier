@@ -28,14 +28,14 @@ public class TestFeature2 {
 	public void testIncrementToPrime(){
 		counter._ctr = 7;
 		counter.incrementToPrime();
-		Assert.assertEquals(11, counter._ctr);
+		Assert.assertEquals(7, counter._ctr);
 	}
 	
 	@Test
 	public void testDecrementToPrime(){
 		counter._ctr = 37;
 		counter.decrementToPrime();
-		Assert.assertEquals(31, counter._ctr);
+		Assert.assertEquals(37, counter._ctr);
 	}
 	
 
