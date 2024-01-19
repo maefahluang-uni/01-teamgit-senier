@@ -3,7 +3,6 @@
  */
 
 import org.junit.*;
-import org.junit.Assert;
 
 /**
  * Test class for Counter class
@@ -33,10 +32,10 @@ public class TestFeature1 {
 	
 	
 	@Test
-	public void testDecrementToEven(){
-		counter._ctr = -12;
-		counter.decrementToEven();
-		Assert.assertEquals(-14, counter._ctr);
-	}
+	 public void testDecrementToEven() {
+        counter.setCounter(-12); // Assuming there is a method to set the counter value
+        counter.decrementToEven();
+        Assert.assertEquals(-14, counter.getCounter()); // Assuming there is a method to get the counter value
+    }
 	
 }

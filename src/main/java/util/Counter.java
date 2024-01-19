@@ -29,15 +29,22 @@ public class Counter {
 	}
 
 	// TODO: dev1- method for increment to closest even number
-	public void incrementToEven() {
-		_ctr = -99;
-	}
+    public void incrementToEven() {
+		increment();
+        if (_ctr % 2 != 0) {
+            // If _ctr is odd, increment to the next even number
+            _ctr++;
+		}
+	}	
 
-	// TODO: dev1- method for decrement to closest even number
-	public void decrementToEven() {
-		_ctr = -99;
-	}
-
+	 // TODO: dev1- method for decrement to closest even number
+	 public void decrementToEven() {
+		decrement();
+        if (_ctr % 2 != 0) {
+            // If _ctr is odd, decrement to the previous even number
+            _ctr--;
+        }
+	 }
 	// TODO: dev2- method for increment to closest prime number
 	public void incrementToPrime() {
 		_ctr = -99;
@@ -52,6 +59,14 @@ public class Counter {
 	// refactor source code from dev1 and dev2
 	public void countFrequency(String word, String sentence) {
 		_ctr = -99;
+	}
+
+	public void setCounter(int i) {
+		_ctr=i;
+	}
+
+	public int getCounter() {
+		return _ctr;
 	}
 
 }
