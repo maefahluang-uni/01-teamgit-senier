@@ -19,7 +19,7 @@ public class Counter {
 
 	// method resets _ctr
 	public void reset() {
-		_ctr = 1; // faulty reset, _ctr should rather be 0
+		_ctr = 0; // faulty reset, _ctr should rather be 0
 	}
 
 	// method multiplies _ctr by n
@@ -54,16 +54,10 @@ public class Counter {
 		String[] words = sentence.split("\\s+");
 
         // Count the frequency of the given word
-        public void countFrequency(String word, String sentence) {
-		String[] words = sentence.split("\\s+");
-
-        // Count the frequency of the given word
         for (String w : words) {
             if (w.equalsIgnoreCase(word)) {
                 _ctr++;
             }
         }
 	}
-	}
-
 }
